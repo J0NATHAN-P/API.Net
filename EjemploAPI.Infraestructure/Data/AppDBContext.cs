@@ -13,7 +13,7 @@ namespace EjemploAPI.Infraestructure.Data
         public AppDBContext(DbContextOptions<AppDBContext> options)
         :base(options){ }
 
-        DbSet<Producto>Productos { get; set; }
+        public DbSet<Producto>Productos { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
